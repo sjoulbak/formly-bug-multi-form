@@ -8,7 +8,7 @@ import { FormlyFormBuilder } from '@ngx-formly/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  @Input() formGroup = new FormGroup({});
+  @Input() form = new FormGroup({});
   @Input() formFields = [];
   @Input() formModel = {};
   @Input() formOptions = {};
@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     this.builder.buildForm(
-      this.formGroup,
+      this.form,
       this.formFields,
       this.formModel,
       this.formOptions
